@@ -67,8 +67,27 @@ public class factorial {
 	 * @return	the factorial of n
 	 */
 	private static int recursiveFactorial(int n)  {
-		
-		return 0; // dummy return so file compiles, replace when writing method	
+		if (n == 1) {
+			return 1;
+		}
+
+		return n * recursiveFactorial(n-1);
+	}
+
+
+	/**
+	 * recursiveSum
+	 * 		recursively computes the sum of all the numbers n and less than n
+	 *
+	 * @param n - the number to find the sums of
+	 * @return the sums of n and numbers less than n
+	 */
+	private static int recursiveSum(int n) {
+		if(n==1){
+			return 1;
+		}
+
+		return n + recursiveSum(n-1);
 	}
 
 	

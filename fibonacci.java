@@ -33,7 +33,7 @@ public class fibonacci {
 			System.exit(0);
 		}
 
-		System.out.println("The first " + args[0] + " fibonacci numbers are:");
+		System.out.println("The first " + args[0] + " fibonacci numbers are:" + iterativeFibonacci(n));
 		
 		iterativeFibonacci(Integer.parseInt(args[0]));
 		
@@ -46,9 +46,16 @@ public class fibonacci {
 	 * 		iteratively computes the first n fibonacci numbers
 	 * 
 	 * @param n - the number of fibonacci numbers to find. must be non-negative.
+	 * @return last term of the sequence
 	 */
-	public static void iterativeFibonacci(int n) {
-
+	public static int iterativeFibonacci(int n) {
+		int fibo = 0;
+		int fiba = 0;
+		for(int i = 1; i<=n; i++){
+			fiba = fibo;
+			fibo = i + fiba;
+		}
+		return fibo;
 	}
 
 	/**
