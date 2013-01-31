@@ -55,7 +55,7 @@ public class fibonacci {
 			int saveFibo = fibo;
 			fibo = fiba;
 			fiba = saveFibo + fiba;
-			System.out.print(fibo + ", ");
+			System.out.print(fibo + "  ");
 		}
 		System.out.println();
 	}
@@ -65,6 +65,7 @@ public class fibonacci {
 	 * 		recursively computes the first n fibonacci numbers
 	 * 
 	 * @param n - the number of fibonacci numbers to find. must be non-negative.
+	 * @return and int of the fibonacci spot
 	 */
 	public static int recursiveFibonacci(int n) {
 		if(n<2){
