@@ -18,7 +18,7 @@ class palindrome {
 		if(iterativePalindrome(args[0]) == true){
 			System.out.println("The word " + args[0] + " is a palendrome");
 		} else {
-			System.out.println("The word " + args[0] + " is not a palendrome");
+			System.out.println("The word " + args[0] + " is NOT a palendrome");
 		}
 	}
 
@@ -49,6 +49,9 @@ class palindrome {
 	 * @return true or false if it is a palindrome
 	 */
 	public static boolean recursivePalindrome(String pal){
-		return false;
+		if(pal.length() < 2){
+			return true;
+		} 
+		return recursivePalindrome(pal.substring(1,pal.length()-2));
 	}
 }
