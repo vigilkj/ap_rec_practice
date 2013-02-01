@@ -48,10 +48,13 @@ class palindrome {
 	 * @param a string
 	 * @return true or false if it is a palindrome
 	 */
-	public static boolean recursivePalindrome(String pal){
+	public static int recursivePalindrome(String pal){
 		if(pal.length() < 2){
-			return true;
-		} 
-		return recursivePalindrome(pal.substring(1,pal.length()-2));
+			return 1;
+		} if (pal[0] == pal[length-1]){
+			return recursivePalindrome(pal.substring(1,pal.length()-2));
+		} else {
+			return 0;
+		}
 	}
 }
